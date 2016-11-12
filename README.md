@@ -1,1 +1,1 @@
-# Personal Projects I have been working on lately
+# Personal Projects I have been working on lately.
