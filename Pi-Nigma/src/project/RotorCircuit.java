@@ -31,6 +31,9 @@ public class RotorCircuit extends Circuit{
 		 case 0://Reflection Rotor
 			 this.paths = new char[]{'d','b','c','a','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
 			 break;
+		 case -2://Test Rotor, used exclusively for JUnit testing
+			 this.paths = new char[]{'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'};
+			 break;
 		 }
 	 }
 	 
