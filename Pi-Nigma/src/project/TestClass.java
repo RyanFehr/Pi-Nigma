@@ -69,4 +69,17 @@ public class TestClass {
 		//
 		
 	}
+	
+	
+	
+	@Test
+	public void PatchCableInitialization()
+	{
+		PatchCable cable1 = new PatchCable('a','z',1);
+		//
+		assertTrue(cable1.serialNo==1);
+		assertTrue(cable1.passCurrent(0)=='z');
+		assertTrue(cable1.passCurrent(1)=='a');
+		
+	}
 }
