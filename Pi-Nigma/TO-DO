@@ -1,0 +1,12 @@
+//TO-DO
+//
+//Move the keyPress method out of the Rotor class
+//Improve the functionality of passCurrent in RotorCircuit class
+//Write advanceNextRotor function for the Rotor class
+//Build tests for advancing Rotors
+//Fix architecutre of Circuit class and make sure inheritance model is correct
+//Decide the architecture for the Entry and Reflection Rotors
+//Build the Light Board
+//Build light board tests
+//Setup basic raw user input and provide output
+//Build gui, allowing for on the fly Enigma intialization

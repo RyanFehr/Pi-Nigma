@@ -82,4 +82,51 @@ public class TestClass {
 		assertTrue(cable1.passCurrent(1)=='a');
 		
 	}
+	
+	@Test
+	public void PatchPanelCurrentTest()
+	{
+		PatchPanel front = new PatchPanel();
+		
+		assertTrue(front.passCurrent('a') == 'a');
+		
+		assertTrue(front.passCurrent('b') == 'b');
+		
+		assertTrue(front.passCurrent('e') == 'e');
+		
+		assertTrue(front.passCurrent('f') == 'f');
+		
+		assertTrue(front.passCurrent('z') == 'z');
+		
+		
+		assertFalse(front.passCurrent('x') == 'd');
+		
+		assertFalse(front.passCurrent('b') == 'c');
+		
+		assertFalse(front.passCurrent('r') == 'y');
+		
+		assertFalse(front.passCurrent('z') == 'a');
+	}
+	
+	@Test
+	public void PatchPanelSingleCableTest()
+	{
+		
+		PatchPanel front = new PatchPanel();
+		
+		
+		assertTrue(front.passCurrent('a') == 'a');
+		
+		//Plug a cable into plugs 'a' and 'd'
+		front.insertCable(1, 'a', 'd');
+		assertTrue(front.passCurrent('a') == 'd');
+				
+		assertTrue(front.passCurrent('d') == 'a');
+		
+		//Unplug cable 1 from the patch panel
+		front.removeCable(1);
+		assertTrue(front.passCurrent('a') == 'a');
+		
+		
+	}
 }
